@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0db64691-e242-4d06-a84d-d3983ef66aae" name="Changes" comment="Added lab_1">
-      <change afterPath="$PROJECT_DIR$/lab_3/lab_3.py" afterDir="false" />
-    </list>
+    <list default="true" id="0db64691-e242-4d06-a84d-d3983ef66aae" name="Changes" comment="Added lab_1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -114,7 +112,7 @@
       <workItem from="1742651002865" duration="1113000" />
       <workItem from="1743028211832" duration="90000" />
       <workItem from="1743028305637" duration="752000" />
-      <workItem from="1743100252928" duration="4007000" />
+      <workItem from="1743100252928" duration="4380000" />
     </task>
     <task id="LOCAL-00001" summary="Added lab_1">
       <option name="closed" value="true" />
@@ -144,7 +142,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Algorithm_2$lab_3.coverage" NAME="lab_3 Coverage Results" MODIFIED="1743111646475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab_3" />
-    <SUITE FILE_PATH="coverage/Algorithm_2$.coverage" NAME=" Coverage Results" MODIFIED="1742557253583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab_2" />
+    <SUITE FILE_PATH="coverage/Algorithm_2$.coverage" NAME=" Coverage Results" MODIFIED="1743111905185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab_3" />
     <SUITE FILE_PATH="coverage/Algorithm_2$lab_1.coverage" NAME="lab_1 Coverage Results" MODIFIED="1741205406460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab_1" />
     <SUITE FILE_PATH="coverage/Algorithm_2$subtask.coverage" NAME="subtask Coverage Results" MODIFIED="1742510684328" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab_1" />
     <SUITE FILE_PATH="coverage/Algorithm_2$lab_2.coverage" NAME="lab_2 Coverage Results" MODIFIED="1742651411045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab_2" />
