@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0db64691-e242-4d06-a84d-d3983ef66aae" name="Changes" comment="Added lab_1" />
+    <list default="true" id="0db64691-e242-4d06-a84d-d3983ef66aae" name="Changes" comment="Added lab_1">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,33 +46,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.Python tests for test.TestFindUnsortedSubarray.executor": "Run",
-    "Python tests.Python tests for test.TestFindUnsortedSubarray.test_edge_case.executor": "Run",
-    "Python tests.Python tests for test.TestFindUnsortedSubarray.test_partially_unsorted.executor": "Run",
-    "Python tests.Python tests for test.TestFindUnsortedSubarray.test_single_element.executor": "Run",
-    "Python tests.Python tests in test.py.executor": "Run",
-    "Python.FUS.executor": "Run",
-    "Python.board.executor": "Run",
-    "Python.lab_1.executor": "Run",
-    "Python.lab_2.executor": "Run",
-    "Python.lab_3.executor": "Run",
-    "Python.p1.executor": "Run",
-    "Python.subtask.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "deletionFromPopupRequiresConfirmation": "false",
-    "git-widget-placeholder": "lab__3",
-    "last_opened_file_path": "C:/Users/ASUS/CodeCompanionAPI",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests for test.TestFindUnsortedSubarray.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test.TestFindUnsortedSubarray.test_edge_case.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test.TestFindUnsortedSubarray.test_partially_unsorted.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test.TestFindUnsortedSubarray.test_single_element.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.FUS.executor&quot;: &quot;Run&quot;,
+    &quot;Python.board.executor&quot;: &quot;Run&quot;,
+    &quot;Python.lab_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.lab_2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.lab_3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.p1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.subtask.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;lab__3&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ASUS/CodeCompanionAPI&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Algorithm_2\lab_1" />
