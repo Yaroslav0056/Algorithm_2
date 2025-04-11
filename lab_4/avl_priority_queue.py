@@ -104,11 +104,10 @@ class Tree:
     def inorder(self, node):
         if node:
             self.inorder(node.left)
-            print(f"{node.value} ({node.priority})")
+            print(f"id: {node.id}, залишок: {node.quantity}")
             self.inorder(node.right)
-        # else:
-        #     print('Дерево порожнє')
-
+        else:
+            return None
 tree = Tree()
 tree.insert(10, 3)
 tree.insert(20, 1)

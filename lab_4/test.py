@@ -32,7 +32,7 @@ class TestAVLTree(unittest.TestCase):
         self.assertEqual(values, [(40, 2), (10, 3), (30, 4)])
 
     def test_empty_pop(self):
-        empty_tree = AVL()
+        empty_tree = Tree()
         min_value = empty_tree.pop()
         self.assertIsNone(min_value)
 
