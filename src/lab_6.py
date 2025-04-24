@@ -25,7 +25,7 @@ def minimum_beers(N, B, raw):
         selected_beers.append(best_beer)
         uncovered -= likes[best_beer]
 
-    return len(selected_beers)
+    return len(selected_beers), selected_beers
 
 def main():
     try:
@@ -40,9 +40,10 @@ def main():
         if len(raw) != N * B:
             raise ValueError(f"Невірно введені переваги")
 
-        result = minimum_beers(N, B, raw)
+        result, selected_beers = minimum_beers(N, B, raw)
         if result is not None:
-            print(result)
+            print(f"Потрібно купити {result} сортів пива")
+            print(f"Сорти пива які потрібно купити: {', '.join(map(str, selected_beers))}")
 
     except ValueError as e:
         print(f"Помилка: {e}")
