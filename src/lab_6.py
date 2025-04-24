@@ -30,12 +30,12 @@ def minimum_beers(N, B, raw):
 def main():
     try:
         N_B_input = input("Введіть кількість людей та кількість сортів пива через пробіл: ").split()
-        if len(N_B_input) != 2 or not all(s.isdigit() for s in N_B_input):
+        if len(N_B_input) != 2 or not all(i.isdigit() for i in N_B_input):
             raise ValueError("Потрібно ввести два цілих додатних числа через пробіл")
         N, B = map(int, N_B_input)
 
         raw = input("Введіть переваги: ").replace(" ", "").upper()
-        if any(c not in 'YN' for c in raw):
+        if any(i not in 'YN' for i in raw):
             raise ValueError("Переваги мають містити лише символи Y або N")
         if len(raw) != N * B:
             raise ValueError(f"Невірно введені переваги")
