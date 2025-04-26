@@ -1,6 +1,7 @@
-def minimum_beers(N, B, raw):
-    likes = [set() for _ in range(B)]
+from itertools import combinations
 
+def minimum_beers_greedy(N, B, raw):
+    likes = [set() for _ in range(B)]
     for i in range(N):
         for j in range(B):
             if raw[i * B + j] == 'Y':
@@ -25,7 +26,29 @@ def minimum_beers(N, B, raw):
         selected_beers.append(best_beer)
         uncovered -= likes[best_beer]
 
-    return len(selected_beers), selected_beers
+    return selected_beers
+
+def smart_minimum_beers(N, B, raw):
+    likes = [set() for _ in range(B)]
+    for i in range(N):
+        for j in range(B):
+            if raw[i * B + j] == 'Y':
+                likes[j].add(i)
+
+    greedy_solution = minimum_beers_greedy(N, B, raw)
+    best_combo = greedy_solution
+
+    all_valid_beers = [i for i in range(B) if likes[i]]
+
+    for r in range(1, len(greedy_solution)):
+        for combo in combinations(all_valid_beers, r):
+            covered = set()
+            for beer in combo:
+                covered |= likes[beer]
+            if len(covered) == N:
+                return len(combo), list(combo)
+
+    return len(best_combo), best_combo
 
 def main():
     try:
@@ -40,10 +63,9 @@ def main():
         if len(raw) != N * B:
             raise ValueError(f"Невірно введені переваги")
 
-        result, selected_beers = minimum_beers(N, B, raw)
-        if result is not None:
-            print(f"Потрібно купити {result} сортів пива")
-            print(f"Сорти пива які потрібно купити: {', '.join(map(str, selected_beers))}")
+        beer_count, selected_beers = smart_minimum_beers(N, B, raw)
+        print(f"Потрібно купити {beer_count} сортів пива")
+        print(f"Сорти пива які потрібно купити: {', '.join(map(str, sorted(selected_beers)))}")
 
     except ValueError as e:
         print(f"Помилка: {e}")
