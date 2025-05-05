@@ -46,9 +46,9 @@ def smart_minimum_beers(N, B, raw):
             for beer in combo:
                 covered |= likes[beer]
             if len(covered) == N:
-                return len(combo), list(combo)
+                return len(combo)
 
-    return len(best_combo), best_combo
+    return len(best_combo)
 
 def main():
     try:
@@ -63,9 +63,8 @@ def main():
         if len(raw) != N * B:
             raise ValueError(f"Невірно введені переваги")
 
-        beer_count, selected_beers = smart_minimum_beers(N, B, raw)
+        beer_count = smart_minimum_beers(N, B, raw)
         print(f"Потрібно купити {beer_count} сортів пива")
-        print(f"Сорти пива які потрібно купити: {', '.join(map(str, sorted(selected_beers)))}")
 
     except ValueError as e:
         print(f"Помилка: {e}")
