@@ -1,10 +1,11 @@
 from itertools import combinations
 
+
 def minimum_beers_greedy(N, B, raw):
     likes = [set() for _ in range(B)]
     for i in range(N):
         for j in range(B):
-            if raw[i * B + j] == 'Y':
+            if raw[i * B + j] == "Y":
                 likes[j].add(i)
 
     uncovered = set(range(N))
@@ -28,11 +29,12 @@ def minimum_beers_greedy(N, B, raw):
 
     return selected_beers
 
+
 def smart_minimum_beers(N, B, raw):
     likes = [set() for _ in range(B)]
     for i in range(N):
         for j in range(B):
-            if raw[i * B + j] == 'Y':
+            if raw[i * B + j] == "Y":
                 likes[j].add(i)
 
     greedy_solution = minimum_beers_greedy(N, B, raw)
@@ -50,15 +52,18 @@ def smart_minimum_beers(N, B, raw):
 
     return len(best_combo)
 
+
 def main():
     try:
-        N_B_input = input("Введіть кількість людей та кількість сортів пива через пробіл: ").split()
+        N_B_input = input(
+            "Введіть кількість людей та кількість сортів пива через пробіл: "
+        ).split()
         if len(N_B_input) != 2 or not all(i.isdigit() for i in N_B_input):
             raise ValueError("Потрібно ввести два цілих додатних числа через пробіл")
         N, B = map(int, N_B_input)
 
         raw = input("Введіть переваги: ").replace(" ", "").upper()
-        if any(i not in 'YN' for i in raw):
+        if any(i not in "YN" for i in raw):
             raise ValueError("Переваги мають містити лише символи Y або N")
         if len(raw) != N * B:
             raise ValueError(f"Невірно введені переваги")
@@ -69,5 +74,6 @@ def main():
     except ValueError as e:
         print(f"Помилка: {e}")
 
-if __name__ == '__main__':
-   main()
+
+if __name__ == "__main__":
+    main()

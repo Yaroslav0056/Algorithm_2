@@ -1,6 +1,7 @@
 import unittest
 from src.lab_6 import smart_minimum_beers
 
+
 class TestBeerSelection(unittest.TestCase):
     def test_minimal_case(self):
         self.assertEqual(smart_minimum_beers(1, 1, "Y"), 1)
@@ -19,6 +20,7 @@ class TestBeerSelection(unittest.TestCase):
 
     def test_another_overlap(self):
         self.assertEqual(smart_minimum_beers(5, 3, "YNNYNYYNNYNYNYY"), 2)
+
 
 if __name__ == "__main__":
     unittest.main()

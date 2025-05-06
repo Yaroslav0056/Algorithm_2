@@ -3,6 +3,7 @@ from bitarray import bitarray
 from time import perf_counter
 from tqdm import tqdm
 
+
 def generate_dense_preferences(N, B, like_percent):
     prob = like_percent / 100
     preferences = []
@@ -15,6 +16,7 @@ def generate_dense_preferences(N, B, like_percent):
         preferences.append(row)
     return preferences
 
+
 def liked_by_beer(n, b, prefs):
     liked = [bitarray(n) for _ in range(b)]
     for arr in liked:
@@ -24,6 +26,7 @@ def liked_by_beer(n, b, prefs):
             if val:
                 liked[j][i] = 1
     return liked
+
 
 def greedy(N, B, liked_by):
     uncovered = bitarray(N)
@@ -50,6 +53,7 @@ def greedy(N, B, liked_by):
 
     return selected
 
+
 def optimization(n, liked, selected):
     selected = set(selected)
     changed = True
@@ -68,11 +72,13 @@ def optimization(n, liked, selected):
                 break
     return selected
 
+
 def minimum_beers(N, B, preferences):
     liked = liked_by_beer(N, B, preferences)
     greedy_set = greedy(N, B, liked)
     result = optimization(N, liked, greedy_set)
     return len(result)
+
 
 def main():
     print("Оберіть тип матриці:")
@@ -84,17 +90,17 @@ def main():
     try:
         N = int(input("Кількість працівників (N): "))
         B = int(input("Кількість сортів пива (B): "))
-        assert 0 < N <= 10 ** 6
-        assert 0 < B <= 10 ** 5
+        assert 0 < N <= 10**6
+        assert 0 < B <= 10**5
     except AssertionError:
         print("Некоректні вхідні дані. N ≤ 10^6, B ≤ 10^5")
         exit()
 
-    if choice == '1':
+    if choice == "1":
         preferences = generate_dense_preferences(N, B, like_percent=1)
-    elif choice == '2':
+    elif choice == "2":
         preferences = generate_dense_preferences(N, B, like_percent=15)
-    elif choice == '3':
+    elif choice == "3":
         preferences = generate_dense_preferences(N, B, like_percent=50)
     else:
         print("Невірний вибір. Введіть 1, 2 або 3")
@@ -107,5 +113,6 @@ def main():
     print(f"\nМінімальна кількість пива: {result}")
     print(f"Час виконання: {duration:.2f} с")
 
+
 if __name__ == "__main__":
-   main()
+    main()
