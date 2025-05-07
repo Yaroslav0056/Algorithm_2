@@ -13,8 +13,8 @@ def find_unsorted_subarray(arr):
     while right > 0 and arr[right] >= arr[right - 1]:
         right -= 1
 
-    min_value = min(arr[left:right + 1])
-    max_value = max(arr[left:right + 1])
+    min_value = min(arr[left : right + 1])
+    max_value = max(arr[left : right + 1])
 
     while left > 0 and arr[left - 1] > min_value:
         left -= 1
@@ -25,7 +25,7 @@ def find_unsorted_subarray(arr):
     return left, right
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test_arrays = [
         [1, 2, 3, 4, 5],
         [1],
@@ -38,4 +38,3 @@ if __name__ == '__main__':
         result = find_unsorted_subarray(arr)
         print(f"Масив: {arr}")
         print(f"Індекси невідсортованого підмасиву: {result}\n")
-

@@ -23,7 +23,7 @@ def find_unsorted_subarrays(arr):
     return subarrays if subarrays else (-1, -1)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test_arrays = [
         [1, 2, 3, 6, 5, 4, 7, 8, 9, 12, 11, 10, 13],
         [1, 2, 3, 4, 5],
