@@ -4,6 +4,7 @@ class BinaryTree:
         self.left = left
         self.right = right
 
+
 def get_height(node):
     if not node:
         return 0
@@ -21,8 +22,10 @@ def get_height(node):
 
     return max(left_height, right_height) + 1
 
+
 def is_tree_balanced(root):
     return get_height(root) != -1
+
 
 # Збалансоване дерево
 root1 = BinaryTree(3)

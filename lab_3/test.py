@@ -1,6 +1,7 @@
 import unittest
 from lab_3 import BinaryTree, is_tree_balanced
 
+
 class TestTreeBalance(unittest.TestCase):
     def test_balanced_tree(self):
         root = BinaryTree(3)
@@ -19,6 +20,7 @@ class TestTreeBalance(unittest.TestCase):
     def test_single_node_tree(self):
         root = BinaryTree(1)
         self.assertTrue(is_tree_balanced(root))
+
 
 if __name__ == "__main__":
     unittest.main()
