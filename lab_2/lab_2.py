@@ -14,10 +14,11 @@ def min_board(N, W, H):
         else:
             min_size = mid + 1
 
-    print(f'Розмір сторони квадрату: {min_size}')
-    print(f'Кількість ітерацій: {counter}')
+    print(f"Розмір сторони квадрату: {min_size}")
+    print(f"Кількість ітерацій: {counter}")
+
 
 min_board(10, 2, 3)
 min_board(2_000_000_000, 1000000000, 999999999)
 min_board(4, 1, 1)
-min_board(15, 1 , 7)
+min_board(15, 1, 7)

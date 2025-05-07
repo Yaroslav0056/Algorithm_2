@@ -1,6 +1,7 @@
 import unittest
 from lab_2 import min_board
 
+
 class TestMinBoardSize(unittest.TestCase):
     def test_example_cases(self):
         self.assertEqual(min_board(10, 2, 3), 9)
@@ -11,6 +12,7 @@ class TestMinBoardSize(unittest.TestCase):
 
     def test_large_cases(self):
         self.assertEqual(min_board(100000, 1000, 1000), 317000)
+
 
 if __name__ == "__main__":
     unittest.main()
