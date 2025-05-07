@@ -1,4 +1,11 @@
-from avl_priority_queue import get_min_priority, get_balance, get_height, right_rotate, left_rotate
+from avl_priority_queue import (
+    get_min_priority,
+    get_balance,
+    get_height,
+    right_rotate,
+    left_rotate,
+)
+
 
 class Node:
     def __init__(self, id, quantity):
@@ -7,6 +14,7 @@ class Node:
         self.left = None
         self.right = None
         self.height = 1
+
 
 class Tree:
     def __init__(self):
@@ -60,6 +68,7 @@ class Tree:
             self.inorder(node.left)
             print(f"id: {node.id}, залишок: {node.quantity}")
             self.inorder(node.right)
+
 
 class Invent:
     def __init__(self):
@@ -142,7 +151,7 @@ class Invent:
         print("Склад очищено")
 
     def save_to_file(self, filename):
-        with open(filename, 'w') as f:
+        with open(filename, "w") as f:
             self._write_data(self.tree.root, f)
 
     def _write_data(self, node, file):
@@ -153,62 +162,66 @@ class Invent:
 
     def load_from_file(self, filename):
         try:
-            with open(filename, 'r') as f:
+            with open(filename, "r") as f:
                 for line in f:
-                    parts = line.strip().split(',')
+                    parts = line.strip().split(",")
                     if len(parts) == 2:
                         id_, quantity = int(parts[0]), int(parts[1])
                         self.insert(id_, quantity, silent=True)
         except FileNotFoundError:
             print("Файл не знайдено, створено новий склад")
 
+
 def main():
     invent = Invent()
-    invent.load_from_file('inventory.txt')
+    invent.load_from_file("inventory.txt")
 
     while True:
-        print('1. Додати товар'
-              '\n2. Оновити товар'
-              '\n3. Видалити товар'
-              '\n4. Пошук товару'
-              '\n5. Показати складу'
-              '\n6. Очистити склад'
-              '\n7. Вийти зі складу')
+        print(
+            "1. Додати товар"
+            "\n2. Оновити товар"
+            "\n3. Видалити товар"
+            "\n4. Пошук товару"
+            "\n5. Показати складу"
+            "\n6. Очистити склад"
+            "\n7. Вийти зі складу"
+        )
 
-        command = input('Ваш вибір: ')
+        command = input("Ваш вибір: ")
 
-        if command == '1':
-            id_ = int(input('Введіть id: '))
-            n = int(input('Введіть кількість: '))
+        if command == "1":
+            id_ = int(input("Введіть id: "))
+            n = int(input("Введіть кількість: "))
             invent.insert(id_, n)
 
-        elif command == '2':
-            id_ = int(input('Введіть id: '))
-            n = int(input('Нова кількість: '))
+        elif command == "2":
+            id_ = int(input("Введіть id: "))
+            n = int(input("Нова кількість: "))
             invent.update(id_, n)
 
-        elif command == '3':
-            id_ = int(input('Введіть id: '))
+        elif command == "3":
+            id_ = int(input("Введіть id: "))
             invent.delete(id_)
 
-        elif command == '4':
-            id_ = int(input('Введіть id: '))
+        elif command == "4":
+            id_ = int(input("Введіть id: "))
             result = invent.find_item(id_)
             print(result if result else "Товар не знайдено.")
 
-        elif command == '5':
+        elif command == "5":
             invent.print_inventory()
 
-        elif command == '6':
+        elif command == "6":
             invent.clear_inventory()
 
-        elif command == '7':
-            invent.save_to_file('inventory.txt')
-            print('Ви покинули склад')
+        elif command == "7":
+            invent.save_to_file("inventory.txt")
+            print("Ви покинули склад")
             break
 
         else:
-            print('Не вірний вибір')
+            print("Не вірний вибір")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()

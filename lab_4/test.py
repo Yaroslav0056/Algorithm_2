@@ -1,6 +1,7 @@
 import unittest
 from avl_priority_queue import Tree
 
+
 class TestAVLTree(unittest.TestCase):
     def setUp(self):
         self.tree = Tree()
@@ -11,11 +12,13 @@ class TestAVLTree(unittest.TestCase):
 
     def test_insert(self):
         values = []
+
         def collect_values(node):
             if node:
                 collect_values(node.left)
                 values.append((node.value, node.priority))
                 collect_values(node.right)
+
         collect_values(self.tree.root)
         self.assertEqual(values, [(20, 1), (40, 2), (10, 3), (30, 4)])
 
@@ -23,11 +26,13 @@ class TestAVLTree(unittest.TestCase):
         min_value = self.tree.pop()
         self.assertEqual(min_value, 20)
         values = []
+
         def collect_values(node):
             if node:
                 collect_values(node.left)
                 values.append((node.value, node.priority))
                 collect_values(node.right)
+
         collect_values(self.tree.root)
         self.assertEqual(values, [(40, 2), (10, 3), (30, 4)])
 
@@ -38,13 +43,16 @@ class TestAVLTree(unittest.TestCase):
 
     def test_inorder(self):
         values = []
+
         def collect_values(node):
             if node:
                 collect_values(node.left)
                 values.append((node.value, node.priority))
                 collect_values(node.right)
+
         collect_values(self.tree.root)
         self.assertEqual(values, [(20, 1), (40, 2), (10, 3), (30, 4)])
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

@@ -6,15 +6,18 @@ class Node:
         self.right = None
         self.height = 1
 
+
 def get_height(node):
     if node:
         return node.height
     return 0
 
+
 def get_balance(node):
     if node:
         return get_height(node.left) - get_height(node.right)
     return 0
+
 
 def right_rotate(y):
     x = y.left
@@ -25,6 +28,7 @@ def right_rotate(y):
     x.height = 1 + max(get_height(x.left), get_height(x.right))
     return x
 
+
 def left_rotate(x):
     y = x.right
     T2 = y.left
@@ -33,6 +37,7 @@ def left_rotate(x):
     x.height = 1 + max(get_height(x.left), get_height(x.right))
     y.height = 1 + max(get_height(y.left), get_height(y.right))
     return y
+
 
 def insert(node, value, priority):
     if not node:
@@ -59,10 +64,12 @@ def insert(node, value, priority):
 
     return node
 
+
 def get_min_priority(node):
     while node.left:
         node = node.left
     return node
+
 
 def remove_min(node):
     if not node.left:
@@ -87,6 +94,7 @@ def remove_min(node):
 
     return node
 
+
 class Tree:
     def __init__(self):
         self.root = None
@@ -108,6 +116,8 @@ class Tree:
             self.inorder(node.right)
         else:
             return None
+
+
 tree = Tree()
 tree.insert(10, 3)
 tree.insert(20, 1)
