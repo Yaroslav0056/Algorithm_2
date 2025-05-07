@@ -3,8 +3,10 @@ from collections import deque
 row_moves = [2, 2, -2, -2, 1, 1, -1, -1]
 col_moves = [-1, 1, 1, -1, 2, -2, 2, -2]
 
+
 def is_in(x, y, N, visited):
     return 0 <= x < N and 0 <= y < N and not visited[x][y]
+
 
 def bfs(N, start, end):
     visited = [[False] * N for _ in range(N)]
@@ -33,6 +35,7 @@ def bfs(N, start, end):
 
     return -1, parent
 
+
 def reconstruct_path(parent, start, end):
     path = []
     current = end
@@ -42,6 +45,7 @@ def reconstruct_path(parent, start, end):
     path.append(start)
     path.reverse()
     return path
+
 
 def main():
     with open("input.txt", "r") as f:
@@ -64,6 +68,7 @@ def main():
         print("Шлях не знайдено")
         with open("output.txt", "a", encoding="UTF-8") as f:
             f.write("Шлях не знайдено\n")
+
 
 if __name__ == "__main__":
     main()

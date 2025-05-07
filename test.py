@@ -1,6 +1,7 @@
 import unittest
 from lab_5 import bfs
 
+
 class TestBFS(unittest.TestCase):
 
     def test_start_equals_end(self):
@@ -20,5 +21,5 @@ class TestBFS(unittest.TestCase):
         self.assertEqual(dist, -1)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
