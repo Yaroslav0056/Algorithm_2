@@ -19,7 +19,7 @@ class TestKMPSearch(unittest.TestCase):
         self.assertEqual(kmp_search("лох", "лілілохсь лілілохсь"), [(4, 6), (14, 16)])
 
     def test_empty_needle(self):
-        self.assertEqual(kmp_search("", "щось тут є"), [])
+        self.assertEqual(kmp_search("", "щось"), [])
 
     def test_empty_haystack(self):
         self.assertEqual(kmp_search("abc", ""), [])
