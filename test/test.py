@@ -13,3 +13,6 @@ class TestIoTtelecom(unittest.TestCase):
 
     def test_empty_case(self):
         self.assertEqual(calculate_minimal_length("communication_wells_empty.csv"), -1)
+
+    def test_big_case(self):
+        self.assertEqual(calculate_minimal_length("communication_wells_big.csv"), 9000)
