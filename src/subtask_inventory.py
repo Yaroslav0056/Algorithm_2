@@ -129,7 +129,7 @@ class Invent:
     def update(self, id):
         node = self.tree.find(self.tree.root, id)
         if node:
-            quantity = int(input(f"Введіть нову кількість для товару з id {id}: "))
+            quantity = int(input(f"Введіть нову кількість для товару: "))
             node.quantity = quantity
             print(f"Залишок товару з id {id} оновлено на {quantity}.")
         else:
