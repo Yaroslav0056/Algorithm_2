@@ -48,25 +48,25 @@ def reconstruct_path(parent, start, end):
 
 
 def main():
-    with open("input.txt", "r") as f:
+    with open("../data/input.txt", "r") as f:
         N = int(f.readline())
         start_x, start_y = map(int, f.readline().strip().split(","))
         end_x, end_y = map(int, f.readline().strip().split(","))
 
     min_steps, parent = bfs(N, (start_x, start_y), (end_x, end_y))
 
-    with open("output.txt", "w", encoding="UTF-8") as f:
+    with open("../data/output.txt", "w", encoding="UTF-8") as f:
         f.write(f"Мінімальна кількість кроків: {min_steps}\n")
 
     if min_steps != -1:
         path = reconstruct_path(parent, (start_x, start_y), (end_x, end_y))
-        with open("output.txt", "a", encoding="UTF-8") as f:
+        with open("../data/output.txt", "a", encoding="UTF-8") as f:
             f.write("Шлях: \n")
             for step in path:
                 f.write(f"({step[0]}, {step[1]})\n")
     else:
         print("Шлях не знайдено")
-        with open("output.txt", "a", encoding="UTF-8") as f:
+        with open("../data/output.txt", "a", encoding="UTF-8") as f:
             f.write("Шлях не знайдено\n")
 
 
