@@ -1,5 +1,5 @@
 import unittest
-from lab_5 import bfs
+from src.lab_5 import bfs
 
 
 class TestBFS(unittest.TestCase):
