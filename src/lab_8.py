@@ -106,4 +106,4 @@ def calculate_minimal_length(file_name):
 
 
 if __name__ == "__main__":
-    calculate_minimal_length("../test/communication_wells.csv")
+    calculate_minimal_length("../data_test/communication_wells.csv")
