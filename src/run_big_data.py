@@ -44,7 +44,7 @@ def main():
             print("Некоректні вхідні дані. N ≤ 10^6, B ≤ 10^5")
             exit()
 
-    filename = "matrix.txt"
+    filename = "../data_for_big_data/matrix.txt"
 
     if choice == "1":
         generate_preferences(N, B, like_percent=1, filename=filename, log="розрідженої")
