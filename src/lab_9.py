@@ -19,9 +19,13 @@ def max_dp(w, lst):
     return round(result, 2), dp
 
 
-def write(file_name, dp):
+def write(file_name, dp, data):
 
     with open(file_name, "w", encoding="UTF-8") as f:
+        f.write(
+            f"Відстань між стовпами - {data[0]}, "
+            f"максимальна висота стовпів - {data[1]}\n"
+        )
         f.write("Таблиця динамічного програмування:\n")
         for row in dp:
             f.write(str(row) + "\n")
@@ -50,14 +54,19 @@ def main():
                 print("Максимальна довжина за вашими даними:")
                 print(f"\033[92m{result}\033[0m", "\n")
                 file_name = f"results/version_{idx}.txt"
-                write(file_name, dp)
+                write(file_name, dp, version)
         elif inp == "2":
-            w = int(input())
-            lst = list(map(int, input().split()))
+            w = int(input("Введіть довжину між стовпами: "))
+            lst = list(
+                map(
+                    int,
+                    input("Введіть через пробіл максимальні висоти стовпів: ").split(),
+                )
+            )
             result, dp = max_dp(w, lst)
             print("Максимальна довжина за вашими даними:")
             print(f"\033[92m{result}\033[0m", "\n")
-            write("results/your_file.txt", dp)
+            write("results/your_file.txt", dp, [w, lst])
         elif inp == "3":
             print("До побачення")
             break
