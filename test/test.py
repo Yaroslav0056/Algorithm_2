@@ -1,5 +1,5 @@
 import unittest
-from lab_2 import min_board
+from src.lab_2 import min_board
 
 
 class TestMinBoardSize(unittest.TestCase):
