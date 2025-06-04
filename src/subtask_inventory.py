@@ -1,3 +1,4 @@
+import os
 from avl_priority_queue import (
     get_min_priority,
     get_balance,
@@ -125,10 +126,11 @@ class Invent:
 
         return node
 
-    def update(self, id, quantity):
-        if self.find_item(id):
-            self.delete(id)
-            self.insert(id, quantity)
+    def update(self, id):
+        node = self.tree.find(self.tree.root, id)
+        if node:
+            quantity = int(input(f"Введіть нову кількість для товару з id {id}: "))
+            node.quantity = quantity
             print(f"Залишок товару з id {id} оновлено на {quantity}.")
         else:
             print(f"Товар з id {id} винесли цигани")
@@ -174,11 +176,13 @@ class Invent:
 
 def main():
     invent = Invent()
-    invent.load_from_file("inventory.txt")
+    base_dir = os.path.dirname(os.path.dirname(__file__))
+    file_name = os.path.join(base_dir, "inventory_to_subtask", "inventory.txt")
+    invent.load_from_file(file_name)
 
     while True:
         print(
-            "1. Додати товар"
+            "\n1. Додати товар"
             "\n2. Оновити товар"
             "\n3. Видалити товар"
             "\n4. Пошук товару"
@@ -187,17 +191,18 @@ def main():
             "\n7. Вийти зі складу"
         )
 
-        command = input("Ваш вибір: ")
+        command = input("\nВаш вибір: ")
 
         if command == "1":
-            id_ = int(input("Введіть id: "))
+            id_ = int(input("\nВведіть id: "))
             n = int(input("Введіть кількість: "))
             invent.insert(id_, n)
 
         elif command == "2":
+
             id_ = int(input("Введіть id: "))
-            n = int(input("Нова кількість: "))
-            invent.update(id_, n)
+
+            invent.update(id_)
 
         elif command == "3":
             id_ = int(input("Введіть id: "))
@@ -215,7 +220,9 @@ def main():
             invent.clear_inventory()
 
         elif command == "7":
-            invent.save_to_file("inventory.txt")
+            os.makedirs(os.path.dirname(file_name), exist_ok=True)
+            invent.save_to_file(file_name)
+
             print("Ви покинули склад")
             break
 

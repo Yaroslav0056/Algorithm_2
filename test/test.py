@@ -1,5 +1,5 @@
 import unittest
-from avl_priority_queue import Tree
+from src.avl_priority_queue import Tree
 
 
 class TestAVLTree(unittest.TestCase):
