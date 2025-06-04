@@ -1,5 +1,5 @@
 import unittest
-from lab_3 import BinaryTree, is_tree_balanced
+from src.lab_3 import BinaryTree, is_tree_balanced
 
 
 class TestTreeBalance(unittest.TestCase):
