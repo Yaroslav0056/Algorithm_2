@@ -13,7 +13,7 @@ class TestMaxDP(unittest.TestCase):
         expected_result = 5.65
         result, dp = max_dp(w, lst)
         self.assertTrue(isclose(result, expected_result, abs_tol=0.01))
-        write("results/test_case_1.txt", dp, [w, lst])
+        write("../output/dp_tables_for_test/test_case_1.txt", dp, [w, lst])
 
     def test_case_2(self):
         """Тест з параметрами: w=100, lst=[1, 1, 1, 1]"""
@@ -22,7 +22,7 @@ class TestMaxDP(unittest.TestCase):
         expected_result = 300.00
         result, dp = max_dp(w, lst)
         self.assertTrue(isclose(result, expected_result, abs_tol=0.01))
-        write("results/test_case_2.txt", dp, [w, lst])
+        write("../output/dp_tables_for_test/test_case_2.txt", dp, [w, lst])
 
     def test_case_3(self):
         """Тест з параметрами: w=4, lst=[100, 2, 100, 2, 100]"""
@@ -31,7 +31,7 @@ class TestMaxDP(unittest.TestCase):
         expected_result = 396.32
         result, dp = max_dp(w, lst)
         self.assertTrue(isclose(result, expected_result, abs_tol=0.01))
-        write("results/test_case_3.txt", dp, [w, lst])
+        write("../output/dp_tables_for_test/test_case_3.txt", dp, [w, lst])
 
     def test_case_4(self):
         """Великий тест з довгим списком висот"""
@@ -91,7 +91,7 @@ class TestMaxDP(unittest.TestCase):
         expected_result = 2738.18
         result, dp = max_dp(w, lst)
         self.assertTrue(isclose(result, expected_result, abs_tol=0.01))
-        write("results/test_case_4.txt", dp, [w, lst])
+        write("../output/dp_tables_for_test/test_case_4.txt", dp, [w, lst])
 
     def test_case_5(self):
         """Тест з однаковими висотами опор"""
@@ -100,7 +100,7 @@ class TestMaxDP(unittest.TestCase):
         result, dp = max_dp(w, lst)
         expected_result = result  # Просто перевіряємо, що вивід коректний
         self.assertTrue(isclose(result, expected_result, abs_tol=0.01))
-        write("results/test_case_5.txt", dp, [w, lst])
+        write("../output/dp_tables_for_test/test_case_5.txt", dp, [w, lst])
 
     def test_case_6(self):
         """Тест, що перевіряє результат більше певного значення"""
@@ -108,7 +108,7 @@ class TestMaxDP(unittest.TestCase):
         lst = [1, 2, 3, 4]
         result, dp = max_dp(w, lst)
         self.assertTrue(result > 3)
-        write("results/test_case_6.txt", dp, [w, lst])
+        write("../output/dp_tables_for_test/test_case_6.txt", dp, [w, lst])
 
 
 if __name__ == "__main__":

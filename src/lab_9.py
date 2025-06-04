@@ -53,7 +53,7 @@ def main():
                 result, dp = max_dp(*version)
                 print("Максимальна довжина за вашими даними:")
                 print(f"\033[92m{result}\033[0m", "\n")
-                file_name = f"results/version_{idx}.txt"
+                file_name = f"../output/dp_tables_for_lab_9/version_{idx}.txt"
                 write(file_name, dp, version)
         elif inp == "2":
             w = int(input("Введіть довжину між стовпами: "))
@@ -66,7 +66,7 @@ def main():
             result, dp = max_dp(w, lst)
             print("Максимальна довжина за вашими даними:")
             print(f"\033[92m{result}\033[0m", "\n")
-            write("results/your_file.txt", dp, [w, lst])
+            write("../output/dp_tables_for_lab_9/your_file.txt", dp, [w, lst])
         elif inp == "3":
             print("До побачення")
             break
