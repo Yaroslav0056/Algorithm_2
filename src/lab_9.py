@@ -37,7 +37,7 @@ def main():
         print("1 - Тестові дані")
         print("2 - Дані з клавіатури")
         print("3 - Вийти з програми")
-        inp = input()
+        inp = input().strip()
         if inp == "1":
             versions = [
                 [2, [3, 3, 3]],
